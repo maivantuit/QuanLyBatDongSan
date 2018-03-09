@@ -156,7 +156,7 @@ public class BaiDangDAO {
 	
 	public static void main(String[] args) {
 		BaiDangDAO b = new BaiDangDAO();		
-		BaiDang a= b.chiTietBaiDang("10");
+		BaiDang a= b.chiTietBaiDang("1");
 		System.out.println(a.getMaBaiDang());
 		System.out.println(a.getTrangThai());
 		System.out.println(a.getTenBaiDang());	

@@ -10,7 +10,7 @@ public class DBConnect {
 	        Connection connect = null;
 	        try {
 	            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-	            String connectionURL = "jdbc:sqlserver://localhost:1433;databaseName = QuanLyBatDongSan;username =sa;password =123456";
+	            String connectionURL = "jdbc:sqlserver://localhost:1433;databaseName = QuanLyBatDongSan;username =sa;password =123";
 	            // them dau "\" tai: \\MAIVANTU
 	            //  //300-FRS-V272\\MAIVANTU or //localhost:1433
 	            connect = DriverManager.getConnection(connectionURL);

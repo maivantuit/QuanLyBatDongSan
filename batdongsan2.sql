@@ -45,7 +45,14 @@ create table ThanhVien(
 	primary key(MaThanhVien)
 )
 insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV001',N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+values ('TV001',N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');\
+insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values ('TV002',N'Từ Thanh Thành','tuthanhthanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values ('TV003',N'Phan Châu Anh','phanchauanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values ('TV004',N'Lê Thị Dương','lethiduong@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+
 create table Tinh(
 	MaTinh varchar(15) primary key,
 	TenTinh nvarchar(50)
@@ -115,29 +122,27 @@ create table ChiTietBaiDang(
 	DiaChi nvarchar(50),
 )
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('1','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('1','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('1','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('1','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('1','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('1','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('2','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('2','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('3','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('3','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('5','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('5','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('4','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('4','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('6','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('6','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('7','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('7','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('8','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('8','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('9','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
-insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
-values('10','2900000000','150m2','null',GETDATE(),'ABC',N'15 Hải Phòng')
+values('9','2900000000','150m2','images/resort1.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 
 
 create table BinhLuan(

@@ -24,7 +24,7 @@
 		
 		<h4><a href="dangkythanhvien.jsp" >Đăng ký thành viên</a></h4>
 		<h3 class="w3-padding-64">
-			<b>BẤT ĐỘNG SẢN
+			<b>-----------------------------
 			</b>
 		</h3>
 	</div>
