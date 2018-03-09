@@ -1,15 +1,48 @@
 package model.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import org.eclipse.jdt.internal.compiler.lookup.CaptureBinding;
+
 import model.bean.BaiDang;
+
 
 import connection.DBConnect;
 
 public class BaiDangDAO {
+	// lay du lieu bang baidang:
+	public ArrayList<BaiDang> layDuLieuBaiDang(){
+		Connection con = DBConnect.getConnection();
+		String sql = "select * from BaiDang";
+		ArrayList<BaiDang> danhSachBaiDang= new ArrayList<BaiDang>();
+		ResultSet rs = null;
+		try {
+			PreparedStatement pstmt = con.prepareCall(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				BaiDang baiDang = new BaiDang();
+				baiDang.setMaBaiDang(rs.getString("MaBaiDang"));
+				baiDang.setMaLoaiBaiDang(rs.getString("MaLoaiBaiDang"));
+				baiDang.setMaThanhVien(rs.getString("MaThanhVien"));
+				baiDang.setMaHuong(rs.getString("MaHuong"));
+				baiDang.setMaDanhMuc(rs.getString("MaDanhMuc"));
+				baiDang.setMaTinh(rs.getString("MaTinh"));
+				baiDang.setMaQuanHuyen(rs.getString("MaQuanHuyen"));
+				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
+				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));
+				baiDang.setTrangThai(rs.getString("TrangThai"));
+						
+				danhSachBaiDang.add(baiDang);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+		return danhSachBaiDang;
+	}
 	// lay du lieu tu database tu bang BaiDang dua theo ma thanh vien:
 	public ArrayList<BaiDang> layDuLieuBaiDangBangCode(String maThanhVien){
 		Connection con = DBConnect.getConnection();
@@ -35,6 +68,7 @@ public class BaiDangDAO {
 				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
 				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));
 				baiDang.setTrangThai(rs.getString("TrangThai"));	
+				
 				listBaiDang.add(baiDang);
 			}
 		}catch (Exception e) {
@@ -67,6 +101,7 @@ public class BaiDangDAO {
 				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
 				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));
 				baiDang.setTrangThai(rs.getString("TrangThai"));	
+				
 				listBaiDang.add(baiDang);
 			}
 		} catch (Exception e) {
@@ -97,21 +132,34 @@ public class BaiDangDAO {
 				baiDang.setThoiGian(rs.getString("ThoiGianDang"));				
 				baiDang.setDiaChi(rs.getString("DiaChi"));
 				baiDang.setTenLoaiBaiDang(rs.getString("TenLoaiBaiDang"));		
+				baiDang.setHinhAnh(rs.getString("HinhAnh"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return baiDang;
 	}
-	public static void main(String[] args) {
-		BaiDangDAO b = new BaiDangDAO();
-		
-		BaiDang baiDang1 = b.chiTietBaiDang("1");
-		System.out.println(baiDang1.getGia());
-		System.out.println(baiDang1.getTrangThai());
-		ArrayList<BaiDang> list= b.danhSachBaiDangCodeTrangThai("Chờ phê duyệt");
-		for(BaiDang item:list){
-			System.out.println(item.getMaBaiDang()+" "+item.getTrangThai());
+	// cap nhat duyet bai dang.
+	public boolean capNhatTrangThaiBaiDang(String trangThai,String maBaiDang){
+		Connection con = DBConnect.getConnection();
+		String sql = String.format("update BaiDang set TrangThai = N'%s' where MaBaiDang = '%s'",trangThai,maBaiDang);
+		try {
+			Statement stmt = con.createStatement();
+			stmt.executeUpdate(sql);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		return false;
 	}
+	
+	
+	public static void main(String[] args) {
+		BaiDangDAO b = new BaiDangDAO();		
+		BaiDang a= b.chiTietBaiDang("10");
+		System.out.println(a.getMaBaiDang());
+		System.out.println(a.getTrangThai());
+		System.out.println(a.getTenBaiDang());	
+	}
+	
 }

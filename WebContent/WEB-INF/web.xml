@@ -79,4 +79,54 @@
     <servlet-name>ChiTietBaiDangServlet</servlet-name>
     <url-pattern>/ChiTietBaiDangServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DangXuatServlet</display-name>
+    <servlet-name>DangXuatServlet</servlet-name>
+    <servlet-class>controller.DangXuatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangXuatServlet</servlet-name>
+    <url-pattern>/DangXuatServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DangXuatAdminServlet</display-name>
+    <servlet-name>DangXuatAdminServlet</servlet-name>
+    <servlet-class>controller.DangXuatAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangXuatAdminServlet</servlet-name>
+    <url-pattern>/DangXuatAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DanhSachTatCaBaiDangServlet</display-name>
+    <servlet-name>DanhSachTatCaBaiDangServlet</servlet-name>
+    <servlet-class>controller.DanhSachTatCaBaiDangServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DanhSachTatCaBaiDangServlet</servlet-name>
+    <url-pattern>/DanhSachTatCaBaiDangServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CapNhatTrangThaiBaiDangAdminServlet</display-name>
+    <servlet-name>CapNhatTrangThaiBaiDangAdminServlet</servlet-name>
+    <servlet-class>controller.CapNhatTrangThaiBaiDangAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CapNhatTrangThaiBaiDangAdminServlet</servlet-name>
+    <url-pattern>/CapNhatTrangThaiBaiDangAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CapNhatTrangThaiGoBaiDangAdminServlet</display-name>
+    <servlet-name>CapNhatTrangThaiGoBaiDangAdminServlet</servlet-name>
+    <servlet-class>controller.CapNhatTrangThaiGoBaiDangAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CapNhatTrangThaiGoBaiDangAdminServlet</servlet-name>
+    <url-pattern>/CapNhatTrangThaiGoBaiDangAdminServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

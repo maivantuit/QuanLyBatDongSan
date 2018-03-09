@@ -15,11 +15,11 @@
     <body>
         <div id="leftBar">
             <ul>
-                <li><a href="/QuanLyBatDongSan/admin/index.jsp">Trang chủ</a></li>
+                <li><a href="/QuanLyBatDongSan/TrangChuServlet">Trang chủ</a></li>
                 <li><a href="">Quản lý cá nhân</a></li>
                 <li><a href="/QuanLyBatDongSan/DanhSachThanhVienServlet">Quản lý thành viên</a></li>
                 <li>
-                	<a href="manager_hoadonbanhang.jsp">Quản lý bài đăng</a>
+                	<a href="/QuanLyBatDongSan/DanhSachTatCaBaiDangServlet">Quản lý bài đăng</a>
                 	<ul class="sub-menu2">                	
 						<li><a href="DanhSachBaiDangServlet?trangThaiUrl=<%="cpdd"%>">Chờ phê duyệt</a></li>
 						<li><a href="DanhSachBaiDangServlet?trangThaiUrl=<%="dr"%>">Đang rao</a></li>	
