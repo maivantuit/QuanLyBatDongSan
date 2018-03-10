@@ -8,7 +8,7 @@ create table Admins(
 	AdminName nvarchar(40),
 	CapDo varchar(30)	-- 1, 2,3
 )
-insert into Admins(AdminID,Password,AdminName,CapDo) values ('adminmain','123','Adminitrator','1')
+insert into Admins(AdminID,Password,AdminName,CapDo) values ('admin','123','Adminitrator','1')
 insert into Admins(AdminID,Password,AdminName,CapDo) values ('adminsub1','123','AdminitratorSub1','2')
 
 
@@ -21,19 +21,44 @@ create table LoaiBaiDang(
 	TenLoaiBaiDang nvarchar(40)
 )
 insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
-values('LBD01',N'Cần bán')
+values('LBD01',N'Căn hộ chung cư')
+insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
+values('LBD02',N'Các loại nhà bán')
+insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
+values('LBD03',N'Các loại đất bán')
+insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
+values('LBD04',N'Trang trại, khu nghĩ dưỡng')
+insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
+values('LBD05',N'Kho nhà xưởng')
+insert into LoaiBaiDang (MaLoaiBaiDang,TenLoaiBaiDang)
+values('LBD06',N'Bất động sản khác')
 create table DanhMuc(
 	MaDanhMuc varchar(15) primary key,
 	TenDanhMuc nvarchar(30),
 )
 insert into DanhMuc(MaDanhMuc,TenDanhMuc)
-values('DM01',N'Bán đất')
+values('DM01',N'Nhà đất cần bán')
+insert into DanhMuc(MaDanhMuc,TenDanhMuc)
+values('DM02',N'Nhà đất cần mua')
+insert into DanhMuc(MaDanhMuc,TenDanhMuc)
+values('DM03',N'Nhà đất cho thuê')
+insert into DanhMuc(MaDanhMuc,TenDanhMuc)
+values('DM04',N'Nhà đất cần thuê')
 create table Huong(
 	MaHuong varchar(15) primary key,
 	TenHuong nvarchar(40)
 )
 insert into Huong(MaHuong,TenHuong) 
 values('H01',N'Tây Bắc')
+insert into Huong(MaHuong,TenHuong) 
+values('H02',N'Đông Bắc')
+insert into Huong(MaHuong,TenHuong) 
+values('H03',N'Tây Nam')
+insert into Huong(MaHuong,TenHuong) 
+values('H04',N'Bắc Nam')
+insert into Huong(MaHuong,TenHuong) 
+values('H05',N'Đông Nam')
+
 create table ThanhVien(
 	MaThanhVien varchar(15),
 	TenThanhVien nvarchar(40),
@@ -45,7 +70,7 @@ create table ThanhVien(
 	primary key(MaThanhVien)
 )
 insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV001',N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');\
+values ('TV001',N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
 insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
 values ('TV002',N'Từ Thanh Thành','tuthanhthanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
 insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
@@ -59,6 +84,12 @@ create table Tinh(
 )
 insert into Tinh(MaTinh,TenTinh)
 values('T01',N'Hà Nội')
+insert into Tinh(MaTinh,TenTinh)
+values('T02',N'Đà Nẵng')
+insert into Tinh(MaTinh,TenTinh)
+values('T03',N'Nha Trang')
+insert into Tinh(MaTinh,TenTinh)
+values('T04',N'TP Hồ Chí Minh')
 create table QuanHuyen(
 	MaQuanHuyen varchar(15) primary key,
 	TenQuanHuyen nvarchar(50),
@@ -152,7 +183,3 @@ create table BinhLuan(
 	NoiDung nvarchar(100),
 	ThoiGian time
 )
---
-
-
-select * from ChiTietBaiDang  join BaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang join LoaiBaiDang on LoaiBaiDang.MaLoaiBaiDang = BaiDang.MaLoaiBaiDang where BaiDang.MaBaiDang = '2'
