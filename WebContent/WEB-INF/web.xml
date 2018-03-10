@@ -159,4 +159,14 @@
     <servlet-name>DoiMatKhauAdminServlet</servlet-name>
     <url-pattern>/DoiMatKhauAdminServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TrangChuBatDongSanServlet</display-name>
+    <servlet-name>TrangChuBatDongSanServlet</servlet-name>
+    <servlet-class>controller.TrangChuBatDongSanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrangChuBatDongSanServlet</servlet-name>
+    <url-pattern>/TrangChuBatDongSanServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

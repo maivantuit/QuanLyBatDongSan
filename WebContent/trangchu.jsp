@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link rel="icon" href='images/favicon.ico' type="image/x-icon" />
+<title>Trang chủ bất động sản</title>
 </head>
 <body>
 	

@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="./css/top.css">
+<link rel="stylesheet" href="css/top.css">
 <script src="./js/jquery-1.11.2.min.js"></script>
 <script src="./js/image.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+	<div class="w3-main" style="margin-left: 340px; margin-right: 40px">
 
 		<!-- Header -->
 		<div class="w3-container" style="margin-top: 80px" id="showcase">
-			
+
 			<h1 class="w3-xxxlarge w3-text-red">
 				<b>BẤT ĐỘNG SẢN</b>
 			</h1>
@@ -23,20 +23,20 @@
 
 		<div class="w3-row-padding">
 			<div class="w3-half">
-				<img src="image/anh1.jpg" style="width: 100%"
+				<img src="images/baidang1.png" style="width: 100%"
 					onclick="onClick(this)" alt="Concrete meets bricks"> <img
-					src="image/anh2.jpg" style="width: 100%" onclick="onClick(this)"
+					src="images/baidang2.jpg" style="width: 100%" onclick="onClick(this)"
 					alt="Light, white and tight scandinavian design"> <img
-					src="image/anh3.jpg" style="width: 100%" onclick="onClick(this)"
+					src="images/baidang3.jpg" style="width: 100%" onclick="onClick(this)"
 					alt="White walls with designer chairs">
 			</div>
 
 			<div class="w3-half">
-				<img src="image/anh4.jpg" style="width: 100%"
+				<img src="images/baidang4.jpg" style="width: 100%"
 					onclick="onClick(this)" alt="Windows for the atrium"> <img
-					src="image/anh5.jpg" style="width: 100%" onclick="onClick(this)"
+					src="images/baidang5.jpg" style="width: 100%" onclick="onClick(this)"
 					alt="Bedroom and office in one space"> <img
-					src="image/anh6.jpg" style="width: 100%" onclick="onClick(this)"
+					src="images/baidang6.jpg" style="width: 100%" onclick="onClick(this)"
 					alt="Scandinavian design">
 			</div>
 		</div>
@@ -50,6 +50,76 @@
 				<p id="caption"></p>
 			</div>
 		</div>
+		<div id="foodtertop">
+			<div id="content">
+			<div id="content-left">
+				<ul>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+					<li>
+						<img src="images/content.jpg">
+						<h2>Trong khi trợ giá các điện thoại khác, nhà bán lẻ Mỹ lại tăng giá với iPhone X vì tin rằng người dùng sẵn sàng mua</h2>
+						<p>Chỉ sau 1 giờ 30 phút cho phép đặt trước trực tuyến iPhone X, lô hàng đầu tiên được giao vào ngày 3 tháng Mười Một đã được lấp kín. Những người sở hữu mới được báo rằng họ sẽ phải đợi từ 4 đến 5 tuần để nhận được thiết bị mới của Apple</p>
+					</li>
+				</ul>
+			</div>
+			<div id="content-right">
+				<div class="menu_right">
+					<h3>LIÊN KẾT NỔI BẬT</h3>
+					<ul>
+						<li><a href="">Bán đất trang trại Đà Lạt</a></li>
+						<li><a href="">Bán nhà mặt phố Phú Vang</a></li>
+						<li><a href="">Bán đất nền Dĩ An</a></li>
+						<li><a href="">Bán nhà riêng Quận 9</a></li>
+						<li><a href="">Bán căn hộ cao cấp Heaven 	</a></li>
+						<li><a href="">Cho thuê văn phòng Đống Đa</a></li>
+						<li><a href="">Cho thuê nhà riêng Đống Đa</a></li>
+						<li><a href="">Bán đất nền khu dân cư VSIP 1</a></li>
+						<li><a href="">Cho thuê nhà riêng Ba Đình</a></li>
+						<li><a href="">Bán biệt thự liền kề Quảng Ngãi</a></li>
+					</ul>
+				</div>
+				<div class="img-quangcao">
+					<img src="images/bannerquangcao.jpg"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="foodterend">
+		
 	</div>
 </body>
 </html>
