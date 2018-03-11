@@ -9,7 +9,7 @@
 <script src="js/jquery-3.2.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Đăng kí thành viên</title>
 </head>
 <style>
 .container {

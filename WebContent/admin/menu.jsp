@@ -26,12 +26,21 @@
 			<li><a href="/QuanLyBatDongSan/TrangChuServlet">Trang chủ</a></li>
 			<li><a href="#">Quản lý thông tin cá nhân</a>
 				<ul class="sub-menu2">
-					<li><a href="CapNhatThongTinAdminServlet?maIDAdminURL=<%=tenDangNhap%>">
-					Cập nhật thông tin cá nhân</a></li>
-					<li><a href="DoiMatKhauAdminServlet?maIDAdminURL=<%=tenDangNhap%>">Đổi mật khẩu</a></li>
+					<li><a
+						href="CapNhatThongTinAdminServlet?maIDAdminURL=<%=tenDangNhap%>">
+							Cập nhật thông tin cá nhân</a></li>
+					<li><a
+						href="DoiMatKhauAdminServlet?maIDAdminURL=<%=tenDangNhap%>">Đổi
+							mật khẩu</a></li>
 				</ul></li>
-			<li><a href="/QuanLyBatDongSan/DanhSachThanhVienServlet">Quản
-					lý thành viên</a></li>
+			<li>
+				<a href="/QuanLyBatDongSan/DanhSachThanhVienServlet">Quản
+					lý thành viên</a>
+			</li>
+			<li>
+				<a href="/QuanLyBatDongSan/DanhSachThanhVienServlet">Quản
+					lý thông điệp</a>
+			</li>
 			<li><a href="/QuanLyBatDongSan/DanhSachTatCaBaiDangServlet">Quản
 					lý bài đăng</a>
 				<ul class="sub-menu2">
