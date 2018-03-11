@@ -41,43 +41,58 @@
 					<img alt="" src="<%=baiDang.getHinhAnh()%>" />
 				</div>
 				<div id="lienhechitietbatdongsan">
-					<table>
-						<tr>
-							<h2 class="lienhe">LIÊN HỆ</h2>
-						</tr>
-						<tr>
-							<h4 class="lienhe"><%=thanhVien.getTenThanhVien() %></h4>
-						</tr>
-						<tr>
-							<h4 class="lienhe"><%=thanhVien.getEmail() %></h4>
-						</tr>
-						<tr>
-							<button class="lienhe" type="" value=""><%=thanhVien.getSdt() %></button>
-						</tr>
-						<br />
-						<tr>
-							<div>
-								<input class="lienhe" type="text" placeholder="Nhập tên của bạn" />
-							</div>
-						</tr>
-						<tr>
-							<div>
-								<input class="lienhe" type="text"
-									placeholder="Nhập gmail của bạn" />
-							</div>
-						</tr>
-						<tr>
-							<div>
-								<input class="lienhe" type="text" placeholder="Nhập sđt của bạn" />
-							</div>
-						</tr>
-						<tr>
-							<button class="lienhe" type="submit" value="GỬI THÔNG ĐIỆP">GỬI
-								THÔNG ĐIỆP</button>
-						</tr>
+					<form action="ThemThongDiepTrangChuServlet" method="POST">
+						<table>
+							<tr>
+								<h2 class="lienhe">LIÊN HỆ</h2>
+							</tr>
+							<tr>
+								<h4 class="lienhe"><%=thanhVien.getTenThanhVien()%></h4>
+							</tr>
+							<tr>
+								<h4 class="lienhe"><%=thanhVien.getEmail()%></h4>
+							</tr>
+							<tr>
+								<button class="lienhe" type="" value=""><%=thanhVien.getSdt()%></button>
+							</tr>
+							<tr>								
+								<input style="text-align: center" class="lienhe" type="text" name="mabaidang"
+										value="<%=baiDang.getMaBaiDang()%>" />
+							</tr>
+							<br />
+							<tr>
+								<div>
+									<input class="lienhe" type="text" name="tennguoigui"
+										placeholder="Nhập tên của bạn" />
+								</div>
+							</tr>
+							<tr>
+								<div>
+									<input class="lienhe" type="text" name="gmailnguoigui"
+										placeholder="Nhập gmail của bạn" />
+								</div>
+							</tr>
+							<tr>
+								<div>
+									<input class="lienhe" type="text" name="sdtnguoigui"
+										placeholder="Nhập sđt của bạn" />
+								</div>
+							</tr>
+							<%
+								String success = (String)request.getAttribute("success");
+								if(success!=null){
+							%>
+							<tr>
+								<h4 style="color: blue" ><%=success %></h4>
+							</tr>
+							<%} %>
+							<tr>
+								<button class="lienhe" type="submit" name="submit"
+									value="submit">GỬI THÔNG ĐIỆP</button>
+							</tr>
 
-					</table>
-
+						</table>
+					</form>
 
 
 				</div>
@@ -89,7 +104,7 @@
 				<h2>
 					<%=baiDang.getTenBaiDang()%></h2>
 				<p>
-					
+
 					<%=baiDang.getMoTa()%></p>
 			</div>
 			<div id="infochitietdongsan">

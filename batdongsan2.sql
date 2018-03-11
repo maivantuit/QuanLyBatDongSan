@@ -173,8 +173,16 @@ values('8','2900000000','150m2','images/baidang8.jpg',GETDATE(),'ABC',N'15 Hải
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
 values('9','2900000000','150m2','images/baidang9.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 
-select * from ChiTietBaiDang
-
+select * from ThongDiep
+create table ThongDiep(
+	MaThongDiep int identity(1,1) primary key,
+	MaBaiDang int foreign key references BaiDang(MaBaiDang),
+	TenNguoiGui nvarchar(50),
+	GmailNguoiGui varchar(50),
+	SDTNguoiGui varchar(30)
+)
+insert into ThongDiep 
+values('1',N'Phan Chân Anh','chauanh@gmail.com','0977237272')
 create table BinhLuan(
 	MaBinhLuan varchar(15) primary key,
 	MaThanhVien varchar(15) foreign key references ThanhVien(MaThanhVien),

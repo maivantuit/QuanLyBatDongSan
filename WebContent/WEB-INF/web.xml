@@ -199,4 +199,14 @@
     <servlet-name>DangXuatTrangChuServlet</servlet-name>
     <url-pattern>/DangXuatTrangChuServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ThemThongDiepTrangChuServlet</display-name>
+    <servlet-name>ThemThongDiepTrangChuServlet</servlet-name>
+    <servlet-class>controller.ThemThongDiepTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThemThongDiepTrangChuServlet</servlet-name>
+    <url-pattern>/ThemThongDiepTrangChuServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
