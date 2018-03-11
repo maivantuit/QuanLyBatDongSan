@@ -64,6 +64,32 @@ public class ThanhVienDAO {
 		}
 		return thanhVien;
 	}
+	// get data from table ThanhVien by MaThanhVien:
+		public ThanhVien thanhVienCodeBaiDang(String maBaiDang){
+			Connection con = DBConnect.getConnection();
+			String sql = String.format("select * from BaiDang join ThanhVien on BaiDang.MaThanhVien = ThanhVien.MaThanhVien where BaiDang.MaBaiDang = '%s'", maBaiDang);
+			ResultSet rs = null;
+			try {
+				Statement stmt = con.createStatement();
+				rs = stmt.executeQuery(sql);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			ThanhVien thanhVien = new ThanhVien();
+			try {
+				while(rs.next()){
+					thanhVien.setMaThanhVien(rs.getString("MaThanhVien"));
+					thanhVien.setTenThanhVien(rs.getString("TenThanhVien"));
+					thanhVien.setEmail(rs.getString("Email"));
+					thanhVien.setDiaChi(rs.getString("DiaChi"));
+					thanhVien.setSdt(rs.getString("SoDienThoai"));
+					thanhVien.setAnhDaiDien(rs.getString("AnhDaiDien"));				
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return thanhVien;
+		}
 
 	public static void main(String[] args) {
 		ThanhVienDAO thanhVienDAO = new ThanhVienDAO();

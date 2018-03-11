@@ -9,7 +9,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Admin</title>
+<title>Trang chủ quản trị viên</title>
+<link rel="icon" href='images/favicon.ico' type="image/x-icon" />
 <link href="/QuanLyBatDongSan/css/mos-style.css" rel='stylesheet'
 	type='text/css' />
 <!--../ ; ./: dai dien cho ky tu cung hang  -->

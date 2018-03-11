@@ -20,7 +20,7 @@ public class BaiDang {
 	private String thoiGian;
 	private String diaChi;
 	private String tenLoaiBaiDang;
-	
+	private String moTa;
 	/**
 	 * 
 	 */
@@ -44,7 +44,7 @@ public class BaiDang {
 	public BaiDang(String maBaiDang, String maLoaiBaiDang, String maThanhVien,
 			String maHuong, String maDanhMuc, String maTinh,
 			String maQuanHuyen, String maPhuongXa, String tenBaiDang,
-			String trangThai) {
+			String trangThai, String moTa) {
 		super();
 		this.maBaiDang = maBaiDang;
 		this.maLoaiBaiDang = maLoaiBaiDang;
@@ -56,6 +56,7 @@ public class BaiDang {
 		this.maPhuongXa = maPhuongXa;
 		this.tenBaiDang = tenBaiDang;
 		this.trangThai = trangThai;
+		this.moTa = moTa;
 	}
 	
 
@@ -128,7 +129,7 @@ public class BaiDang {
 			String maQuanHuyen, String maPhuongXa, String tenBaiDang,
 			String trangThai, String adminID, String gia, String dienTich,
 			String donVi, String hinhAnh, String thoiGian, String diaChi,
-			String tenLoaiBaiDang) {
+			String tenLoaiBaiDang,String moTa) {
 		super();
 		this.maBaiDang = maBaiDang;
 		this.maLoaiBaiDang = maLoaiBaiDang;
@@ -148,6 +149,21 @@ public class BaiDang {
 		this.thoiGian = thoiGian;
 		this.diaChi = diaChi;
 		this.tenLoaiBaiDang = tenLoaiBaiDang;
+		this.moTa = moTa;
+	}
+	
+	/**
+	 * @return the moTa
+	 */
+	public String getMoTa() {
+		return moTa;
+	}
+
+	/**
+	 * @param moTa the moTa to set
+	 */
+	public void setMoTa(String moTa) {
+		this.moTa = moTa;
 	}
 
 	/**

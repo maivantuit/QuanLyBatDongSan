@@ -30,24 +30,86 @@ progress {
 }
 
 audio
+
+
+
+
+
+
+
+
 :not
+
+
+
+
  
+
+
+
+
 (
 [
 controls
 ]
+
+
+
+
  
+
+
+
+
 ){
 display
-:
- 
-none
-;
 
-	
-height
+
+
+
+
+
+
+
 :
+
+
+
+
  
+
+
+
+
+none
+
+
+
+
+
+
+
+
+;
+height
+
+
+
+
+
+
+
+
+:
+
+
+
+
+ 
+
+
+
+
 0
 }
 [hidden],template {
@@ -106,16 +168,64 @@ img {
 }
 
 svg
+
+
+
+
+
+
+
+
 :not
+
+
+
+
  
+
+
+
+
 (
 :root
+
+
+
+
  
+
+
+
+
 ){
 overflow
+
+
+
+
+
+
+
+
 :
+
+
+
+
  
+
+
+
+
 hidden
+
+
+
+
+
+
+
+
 
 
 }
@@ -130,7 +240,8 @@ hr {
 	overflow: visible
 }
 
-button,input,select,textarea {
+,
+input,select,textarea {
 	font: inherit;
 	margin: 0
 }
@@ -140,20 +251,28 @@ optgroup {
 }
 
 button,input {
-	overflow: visible
+	overflow: visible ;
+	width:  250px;
+	height: 35px;
+	margin-top: 5px;
 }
 
-button, select {
-    text-transform: none;
-    width: 250px;
-    border: 1px solid black;
-    color: #333333;
-    background-color: white;
-    margin-top: 15px;
+button,select {
+	text-transform: none;
+	width: 250px;
+	/* border: 1px solid black; */
+	color: #333333;
+	background-color: #fff;
+	margin-top: 15px;
+	border-color: #ccc;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
 
 button,html [type=button],[type=reset],[type=submit] {
-	-webkit-appearance: button
+	-webkit-appearance: button;
+	width: 250px;
+	background: #efadad;
 }
 
 button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner
@@ -1012,7 +1131,23 @@ keyframes w3-spin { 0%{
 transform
 
 
+
+
+
+
+
+
+
+
 :rotate(359deg)
+
+
+
+
+
+
+
+
 
 
 }
@@ -1030,7 +1165,23 @@ keyframes fading { 0%{
 opacity
 
 
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
 
 
 1
@@ -1039,7 +1190,23 @@ opacity
 opacity
 
 
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
 
 
 0
@@ -1747,19 +1914,116 @@ to {
 }
 /*tim kiem*/
 #timkiem {
-    background: #f44336;
-    height: 400px;
-    width: 250px;
-    margin-top: 20px;
+	background: #f44336;
+	height: 400px;
+	width: 250px;
+	margin-top: 20px;
 }
-#timkiem .timkiemall{
+
+#timkiem .timkiemall {
 	color: black;
 	width: 250px;
+	text-transform: none;
+	width: 250px;
+	/* border: 1px solid black; */
+	color: #333333;
+	background-color: #fff;
+	margin-top: 15px;
+	border-color: #ccc;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
-#timkiem tr{
+
+#timkiem tr {
 	width: 350px;
 	background: #f44336;
 }
-#xemketqua{
+
+#xemketqua {
 	background: #9777e4;
+}
+
+.w3-row-padding {
+	background: #ea9292;
+	padding: 5px;
+}
+/*chi tiet bat dong san*/
+#chitietbatdongsan {
+	background: pink;
+	height: 500px;
+	width: 100%;
+}
+
+#topchitietbatdongsan {
+	background: green;
+	width: 100%;
+	height: 500px;
+}
+
+#hinhanhchitietbatdongsan {
+	background: #523982;
+	height: 100%;
+	width: 60%;
+	float: left;
+}
+
+#hinhanhchitietbatdongsan img {
+	height: 100%;
+	width: 100%;
+}
+
+#lienhechitietbatdongsan {
+	background: #f44336;
+	height: 100%;
+	width: 40%;
+	float: right;
+	text-align: center;
+}
+
+#chitietbatdongsan2 {
+	background: #ad4747;
+	height: 300px;
+	width: 100%;
+}
+
+#chitietbatdongsan2 #tenvamotachitietdongsan {
+	background: #faebd7;
+	height: 100%;
+	width: 60%;
+	float: left;
+}
+
+#chitietbatdongsan2 #infochitietdongsan {
+	background: antiquewhite;
+	height: 100%;
+	width: 40%;
+	float: right;
+}
+#infochitietdongsan table {
+    height: 100%;
+    width: 100%;
+}
+
+#infochitietdongsan table tr {
+    border: 1px solid #ccc;
+}
+
+#infochitietdongsan table tr td {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#tenvamotachitietdongsan h2 {
+    color: #1200ff;
+    /* font-weight: bold; */
+}
+/**/
+.menu_right {
+    background: #f77373;
+    /* color: white; */
+}
+/**/
+#foodterchitiet {
+    background: #f44336;
+    height: 200px;
+    width: 100%;
 }

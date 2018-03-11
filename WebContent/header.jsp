@@ -19,7 +19,7 @@
 	<a class="w3-button w3-hide-large w3-display-topleft"
 		style="width: 100%; font-size: 22px">Close Menu</a>
 	<div class="w3-container">
-	<h4><a href="trangchu.jsp">Trang chủ</a></h4>
+	<h4><a href="TrangChuBatDongSanServlet">Trang chủ</a></h4>
 		<h4><a href="dangnhap.jsp">Xin chào: Mai Văn Tú</a></h4>
 		
 		<h4><a href="dangkythanhvien.jsp" >Đăng ký thành viên</a></h4>		
@@ -76,7 +76,7 @@
 			</ul>
 		</div>
 		<div id="timkiem">
-			<input class="timkiemall" type="text" name="" placeholder="Search.."/>
+			<input class="timkiemall" type="text" name="" placeholder="Tìm kiếm..."/>
 			<table>							
 				<tr>
 					<td >

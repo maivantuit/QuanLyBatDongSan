@@ -8,7 +8,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <link href="/QuanLyBatDongSan/css/mos-style.css" rel='stylesheet' type='text/css' /> <!--../ ; ./: dai dien cho ky tu cung hang  -->
+        <link rel="icon" href='images/favicon.ico' type="image/x-icon" />
         <title>login</title>
         
     </head>

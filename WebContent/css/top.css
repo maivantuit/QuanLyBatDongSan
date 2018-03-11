@@ -10,7 +10,10 @@ body {
 	margin-bottom: -6px;
 	margin-top: 16px;
 	opacity: 0.8;
-	cursor: pointer
+	cursor: pointer;
+	border-color: #ccc;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
 
 .w3-half img:hover {
@@ -18,87 +21,109 @@ body {
 }
 
 #foodtertop {
-	margin-top: 100px;	
-    background: #fff;
-    height: 2000px;
-    width: 100%;
+	margin-top: 100px;
+	background: #fff;
+	height: 2000px;
+	width: 100%;
 }
 /**==#content==**/
-#content{
+#content {
 	margin-top: 10px;
 }
-#content #content-left{
+
+#content #content-left {
 	width: 902px;
 	float: left;
 	min-height: 400px;
+	background: #faebd7;
 }
-#content #content-left ul{
+
+#content #content-left ul {
 	margin: 0px;
 	padding: 0px;
 }
-#content #content-left ul li{
+
+#content #content-left ul li {
 	list-style: none;
 	clear: both;
-	border-bottom: 2px solid #ccc;	
-	float: left; /* phải có thuộc tính phải giống với img kia, có thể có vấn đề như này*/
-	margin-bottom: 20px;		
-}
-#content #content-left ul li img{
-	float: left;	
+	border-bottom: 2px solid #ccc;
+	float: left;
+	/* phải có thuộc tính phải giống với img kia, có thể có vấn đề như này*/
 	margin-bottom: 20px;
-	margin-right:10px;
 }
-#content #content-left ul li h2{
+
+#content #content-left ul li img {
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	height: 200px;
+	width: 200px;
+	border-color: #ccc;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+#content #content-left ul li h2 {
 	margin: 0px;
 	padding: 0px;
 	font-size: 16px;
 }
 
-#content #content-right{
-	width: 300px;	
+#content #content-right {
+	width: 300px;
 	float: left;
 	min-height: 400px;
 }
-#content #content-right .menu_right ul{ /*việc đặt ul như này lặp đi lắp lại, sau không định dạng ul{} riêng, ban đầu*/
-	margin: -15px 0px 0px 0px; /*nhớ trừ nhé, khi margin 0px không thay đổi thì ta sử dụng - âm.*/
+
+#content #content-right .menu_right ul {
+	/*việc đặt ul như này lặp đi lắp lại, sau không định dạng ul{} riêng, ban đầu*/
+	margin: -15px 0px 0px 0px;
+	/*nhớ trừ nhé, khi margin 0px không thay đổi thì ta sử dụng - âm.*/
 	padding: 0px;
-	border: 1px solid #ccc;	
+	border: 1px solid #ccc;
 }
-#content #content-right .menu_right ul li{
+
+#content #content-right .menu_right ul li {
 	list-style: none;
 	margin: 0px;
-	padding: 0px;	
+	padding: 0px;
 }
-#content #content-right .menu_right ul li a{
+
+#content #content-right .menu_right ul li a {
 	display: block;
 	text-decoration: none;
 	line-height: 45px;
 	border-bottom: 1px solid #ccc;
 	background: url(../images/menuicon2.png) no-repeat 2px;
 	text-indent: 25px;
-	color: green;
+	color: #731c1c;
 	height: 40px;
 }
-#content #content-right h3{
-	background: #194d58 url(../images/menuicon.png) no-repeat 1px ; /*nên bỏ trong CSS này*/
+
+#content #content-right h3 {
+	background: #194d58 url(../images/menuicon.png) no-repeat 1px;
+	/*nên bỏ trong CSS này*/
 	height: 40px;
-	margin-top: 0px;	
+	margin-top: 0px;
 	font-size: 16px;
 	line-height: 40px;
 	color: white;
 	text-indent: 35px; /*thụt vào đầu dòng*/
 }
+
 #content #content-right .img-quangcao {
 	height: 700px;
-
 }
-#content #content-right .img-quangcao img{
+
+#content #content-right .img-quangcao img {
 	height: 700px;
 	width: 300px;
 	margin-top: 50px;
 }
-#foodterend{
-	background: violet;
+
+#foodterend {
+	background: #f44336;
 	height: 400px;
 	width: 100%;
+	clear: both;
 }

@@ -169,4 +169,14 @@
     <servlet-name>TrangChuBatDongSanServlet</servlet-name>
     <url-pattern>/TrangChuBatDongSanServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ChiTietBaiDangTrangChuServlet</display-name>
+    <servlet-name>ChiTietBaiDangTrangChuServlet</servlet-name>
+    <servlet-class>controller.ChiTietBaiDangTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChiTietBaiDangTrangChuServlet</servlet-name>
+    <url-pattern>/ChiTietBaiDangTrangChuServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

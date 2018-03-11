@@ -153,10 +153,79 @@ public class BaiDangDAO {
 		return false;
 	}
 	
-	
+	// lay bang bai dang join chi tiet show len trang chu:
+	public ArrayList<BaiDang> layDuLieuBaiDangJoinChiTietBangDang(){
+		Connection con = DBConnect.getConnection();
+		String sql = "select * from BaiDang join ChiTietBaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang";
+		ArrayList<BaiDang> danhSachBaiDang= new ArrayList<BaiDang>();
+		ResultSet rs = null;
+		try {
+			PreparedStatement pstmt = con.prepareCall(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				BaiDang baiDang = new BaiDang();
+				baiDang.setMaBaiDang(rs.getString("MaBaiDang"));
+				baiDang.setMaLoaiBaiDang(rs.getString("MaLoaiBaiDang"))	;			
+				baiDang.setMaHuong(rs.getString("MaHuong"));
+				baiDang.setMaDanhMuc(rs.getString("MaDanhMuc"));
+				baiDang.setMaTinh(rs.getString("MaTinh"));
+				baiDang.setMaQuanHuyen(rs.getString("MaQuanHuyen"));
+				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
+				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));								
+				baiDang.setGia(rs.getString("Gia"));
+				baiDang.setDienTich(rs.getString("DienTich"));
+				baiDang.setMaThanhVien(rs.getString("MaThanhVien"));
+				baiDang.setHinhAnh(rs.getString("HinhAnh"));
+				baiDang.setTrangThai(rs.getString("TrangThai"));
+				baiDang.setThoiGian(rs.getString("ThoiGianDang"));				
+				baiDang.setDiaChi(rs.getString("DiaChi"));
+				baiDang.setMoTa(rs.getString("MoTa"));
+				danhSachBaiDang.add(baiDang);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+		return danhSachBaiDang;
+	}
+	// lay chi tiet bai dang trang chu:
+	public BaiDang chiTietBaiDangTrangChu(String maBaiDang){
+		Connection con = DBConnect.getConnection();
+		String sql = String.format("select * from ChiTietBaiDang  join BaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang join LoaiBaiDang on LoaiBaiDang.MaLoaiBaiDang = BaiDang.MaLoaiBaiDang where ChiTietBaiDang.MaBaiDang = '%s'", maBaiDang);
+		ResultSet rs = null;
+		try {
+			Statement stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		BaiDang baiDang = new BaiDang();
+		try {
+			while(rs.next()){				
+				baiDang.setMaBaiDang(rs.getString("MaBaiDang"));
+				baiDang.setMaLoaiBaiDang(rs.getString("MaLoaiBaiDang"))	;			
+				baiDang.setMaHuong(rs.getString("MaHuong"));
+				baiDang.setMaDanhMuc(rs.getString("MaDanhMuc"));
+				baiDang.setMaTinh(rs.getString("MaTinh"));
+				baiDang.setMaQuanHuyen(rs.getString("MaQuanHuyen"));
+				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
+				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));								
+				baiDang.setGia(rs.getString("Gia"));
+				baiDang.setDienTich(rs.getString("DienTich"));
+				baiDang.setMaThanhVien(rs.getString("MaThanhVien"));
+				baiDang.setHinhAnh(rs.getString("HinhAnh"));
+				baiDang.setTrangThai(rs.getString("TrangThai"));
+				baiDang.setThoiGian(rs.getString("ThoiGianDang"));				
+				baiDang.setDiaChi(rs.getString("DiaChi"));
+				baiDang.setMoTa(rs.getString("MoTa"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return baiDang;
+	}
 	public static void main(String[] args) {
 		BaiDangDAO b = new BaiDangDAO();		
-		BaiDang a= b.chiTietBaiDang("1");
+		BaiDang a= b.chiTietBaiDangTrangChu("1");
 		System.out.println(a.getMaBaiDang());
 		System.out.println(a.getTrangThai());
 		System.out.println(a.getTenBaiDang());	

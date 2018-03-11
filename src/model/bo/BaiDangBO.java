@@ -27,8 +27,19 @@ public class BaiDangBO {
 	public ArrayList<BaiDang> layDuLieuBaiDang() {
 		return baiDangDAO.layDuLieuBaiDang();
 	}
+
 	// cap nhat duyet bai dang.
-	public boolean capNhatTrangThaiBaiDang(String trangThai,String maBaiDang){
+	public boolean capNhatTrangThaiBaiDang(String trangThai, String maBaiDang) {
 		return baiDangDAO.capNhatTrangThaiBaiDang(trangThai, maBaiDang);
+	}
+
+	// lay bang bai dang join chi tiet show len trang chu:
+	public ArrayList<BaiDang> layDuLieuBaiDangJoinChiTietBangDang() {
+		return baiDangDAO.layDuLieuBaiDangJoinChiTietBangDang();
+	}
+
+	// lay chi tiet bai dang trang chu:
+	public BaiDang chiTietBaiDangTrangChu(String maBaiDang) {
+		return baiDangDAO.chiTietBaiDangTrangChu(maBaiDang);
 	}
 }
