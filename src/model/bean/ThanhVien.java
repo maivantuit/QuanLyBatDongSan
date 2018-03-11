@@ -9,6 +9,9 @@ public class ThanhVien {
 	private String sdt;
 	private String anhDaiDien;
 	public ThanhVien(){}
+	public ThanhVien(String maThanhVien){
+		this.maThanhVien = maThanhVien;
+	}
 	/**
 	 * @param maThanhVien
 	 * @param tenThanhVien
@@ -17,7 +20,7 @@ public class ThanhVien {
 	 * @param diaChi
 	 * @param sdt
 	 * @param anhDaiDien
-	 */
+	 */	
 	public ThanhVien(String maThanhVien, String tenThanhVien, String email,
 			String passWord, String diaChi, String sdt, String anhDaiDien) {
 		super();

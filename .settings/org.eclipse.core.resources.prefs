@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//WebContent/css/top.css=UTF-8
 encoding//src/controller/CapNhatTrangThaiBaiDangAdminServlet.java=UTF-8
 encoding//src/controller/CapNhatTrangThaiGoBaiDangAdminServlet.java=UTF-8
+encoding//src/controller/DangNhapTrangChuServlet.java=UTF-8
 encoding//src/controller/DanhSachBaiDangServlet.java=UTF-8

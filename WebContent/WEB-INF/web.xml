@@ -179,4 +179,24 @@
     <servlet-name>ChiTietBaiDangTrangChuServlet</servlet-name>
     <url-pattern>/ChiTietBaiDangTrangChuServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DangNhapTrangChuServlet</display-name>
+    <servlet-name>DangNhapTrangChuServlet</servlet-name>
+    <servlet-class>controller.DangNhapTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangNhapTrangChuServlet</servlet-name>
+    <url-pattern>/DangNhapTrangChuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DangXuatTrangChuServlet</display-name>
+    <servlet-name>DangXuatTrangChuServlet</servlet-name>
+    <servlet-class>controller.DangXuatTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangXuatTrangChuServlet</servlet-name>
+    <url-pattern>/DangXuatTrangChuServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

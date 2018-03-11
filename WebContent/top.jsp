@@ -26,7 +26,7 @@
 			<h1 class="w3-xxxlarge w3-text-red">
 				<b>BẤT ĐỘNG SẢN</b>
 			</h1>
-			<hr style="width: 50px; border: 5px solid red" class="w3-round">
+			<hr style="width: 355px; border: 5px solid red" class="w3-round">			
 		</div>
 
 		<div class="w3-row-padding">

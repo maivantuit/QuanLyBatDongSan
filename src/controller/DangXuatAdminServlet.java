@@ -36,7 +36,7 @@ public class DangXuatAdminServlet extends HttpServlet {
 		HttpSession  session = request.getSession(); 
         {              
             session.invalidate();                
-            response.sendRedirect("DangNhapAdminServlet");
+            response.sendRedirect("DangNhapTrangChuServlet");
         }
     
 		

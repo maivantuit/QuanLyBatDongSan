@@ -22,4 +22,9 @@ public class ThanhVienBO {
 	public ThanhVien thanhVienCodeBaiDang(String maBaiDang) {
 		return thanhVienDAO.thanhVienCodeBaiDang(maBaiDang);
 	}
+
+	// dang nhap thanh vien:
+	public ThanhVien dangNhap(String email, String matKhau) {
+		return thanhVienDAO.dangNhap(email, matKhau);
+	}
 }

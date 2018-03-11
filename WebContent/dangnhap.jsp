@@ -11,7 +11,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		
 	
+	%>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="login-screen"></div>
     <div class="login-center">
@@ -21,7 +24,7 @@
                     <div class="login" id="card">
                     	<div class="front signin_form"> 
                         <p>Login Your Account</p>
-                          <form class="login-form" action="LoginServlet" method="post">
+                          <form class="login-form" action="DangNhapTrangChuServlet" method="POST">
                               <div class="form-group">
                                   <div class="input-group">
                                       <input type="email" class="form-control" name="email" placeholder="Type your email">
@@ -38,14 +41,20 @@
                                       </span>
                                   </div>
                               </div>
-                              <div class="checkbox">
-                              <label><input type="checkbox">Remember me next time.</label>
-                              </div>
+                            <%
+                            	String error = (String)request.getAttribute("error");
+                            	if(error!=null){                            		
+                            	
+                            %>
+                            <h5 style="color: red;">
+                            	<%=error %>
+                            </h5>
+                            <%} %>
                               
                               <div class="form-group sign-btn">
-                                  <input type="submit" class="btn" value="Log in">
+                                  <button class="bn" type="submit" name="submit" value="submit">Login</button>   
                                   <p><a href="#" class="forgot">Can't access your account?</a></p>
-                                  <p><strong>New to TimeInfo?</strong><br><a href="Sigup.jsp" id="flip-btn" class="signup signup_link">Sign up for a new account</a></p>
+                                  <p><strong>New to TimeInfo?</strong><br><a href="dangkythanhvien.jsp" id="flip-btn" class="signup signup_link">Sign up for a new account</a></p>
                               </div>
                           </form>
                         </div>
