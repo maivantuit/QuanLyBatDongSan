@@ -95,12 +95,12 @@ public class ThanhVienDAO {
 		}
 		return thanhVien;
 	}
+
 	// kiem tra 1 thanh vien:
 	public ThanhVien kiemTraThanhVien(String maThanhVien) {
 		Connection con = DBConnect.getConnection();
-		String sql = String
-				.format("select * from ThanhVien where Email = '%s'",
-						maThanhVien);
+		String sql = String.format(
+				"select * from ThanhVien where Email = '%s'", maThanhVien);
 		ResultSet rs = null;
 		try {
 			Statement stmt = con.createStatement();
@@ -124,28 +124,42 @@ public class ThanhVienDAO {
 		}
 		return thanhVien;
 	}
+
 	// dang nhap thanh vien:
-	public ThanhVien dangNhap(String email, String matKhau){
+	public ThanhVien dangNhap(String email, String matKhau) {
 		Connection con = DBConnect.getConnection();
-		ThanhVien thanhVien =kiemTraThanhVien(email);
-		if(thanhVien.getPassWord().equalsIgnoreCase(matKhau)){
+		ThanhVien thanhVien = kiemTraThanhVien(email);
+		if (thanhVien.getPassWord().equalsIgnoreCase(matKhau)) {
 			return thanhVien;
-		}else{
+		} else {
 			return null;
 		}
 	}
+
+	
+
+	// dang ky 1 thanh vien moi:
+	public boolean themThanhVienMoi(String tenThanhVien, String email,
+			String passWord, String diaChi, String sdt) {
+		Connection con = DBConnect.getConnection();
+		String sql = String
+				.format("insert into ThanhVien(TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai)  values (N'%s','%s','%s',N'%s','%s');",
+						tenThanhVien, email, passWord, diaChi, sdt);
+		try {
+			Statement stmt = con.createStatement();
+			stmt.executeUpdate(sql);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	
+	
 	public static void main(String[] args) {
 		ThanhVienDAO thanhVienDAO = new ThanhVienDAO();
-
-		ThanhVien tv1 = thanhVienDAO.kiemTraThanhVien("maivantu@gmail.com");
-		System.out.println(tv1.getMaThanhVien());
-		System.out.println(tv1.getEmail());
-		System.out.println(tv1.getPassWord());
-		tv1=thanhVienDAO.dangNhap(tv1.getEmail(),tv1.getPassWord());
-		if(tv1!=null){
-			System.out.println("login success");
-		}else{
-			System.out.println("login fail");
-		}
+		thanhVienDAO.themThanhVienMoi("cop", "cop@gmail.com", "123", "quang tri", "092183282");
+		
 	}
 }

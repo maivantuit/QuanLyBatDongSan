@@ -60,23 +60,22 @@ insert into Huong(MaHuong,TenHuong)
 values('H05',N'Đông Nam')
 
 create table ThanhVien(
-	MaThanhVien varchar(15),
+	MaThanhVien int identity(1,1) primary key,
 	TenThanhVien nvarchar(40),
 	Email varchar(50),
 	MatKhau varchar(40),
 	DiaChi nvarchar(100),
 	SoDienThoai varchar(30),
-	AnhDaiDien varchar(100),
-	primary key(MaThanhVien)
+	AnhDaiDien varchar(100),	
 )
-insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV001',N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
-insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV002',N'Từ Thanh Thành','tuthanhthanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
-insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV003',N'Phan Châu Anh','phanchauanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
-insert into ThanhVien(MaThanhVien,TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
-values ('TV004',N'Lê Thị Dương','lethiduong@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values (N'Mai Văn Tú','maivantu@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values (N'Từ Thanh Thành','tuthanhthanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai,AnhDaiDien) 
+values (N'Phan Châu Anh','phanchauanh@gmail.com','123',N'Quảng Trị','0977775487','images/tu.png');
+insert into ThanhVien(TenThanhVien,Email,MatKhau,DiaChi,SoDienThoai) 
+values (N'Lê Thị Dương','lethiduong@gmail.com','123',N'Quảng Trị','0977775487');
 
 create table Tinh(
 	MaTinh varchar(15) primary key,
@@ -107,8 +106,8 @@ insert into PhuongXa(MaPhuongXa,TenPhuongXa,MaQuanHuyen)
 values('PX01',N'Long Đàn','Q01')
 create table BaiDang(
 	MaBaiDang int identity(1,1) primary key,	
-	MaLoaiBaiDang varchar(15) foreign key references LoaiBaiDang(MaLoaiBaiDang),
-	MaThanhVien varchar(15) foreign key references ThanhVien(MaThanhVien),	
+	MaLoaiBaiDang varchar(15) foreign key references LoaiBaiDang(MaLoaiBaiDang),	
+	MaThanhVien int foreign key references ThanhVien(MaThanhVien),	
 	MaHuong varchar(15) foreign key references Huong(MaHuong),	
 	MaDanhMuc varchar(15) foreign key references DanhMuc(MaDanhMuc),
 	MaTinh varchar(15) foreign key references Tinh(MaTinh),
@@ -119,23 +118,23 @@ create table BaiDang(
 	MoTa nvarchar(300)	
 )
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Cần bán gấp 3 căn : flc 265 cầu giấy và flc garden đại mỗ, liền kề ls20,21',N'Đang rao',N'Cơ sở này bao gồm: * 5 căn hộ thiết kế Studio Thụy Sĩ, * 1 nhà hàng design Pizzeria Grotto * 1 sân Minigolf quốc tế trong khuôn viên thoai......')
+values('LBD01','1','H01','DM01','T01','Q01','PX01',N'Cần bán gấp 3 căn : flc 265 cầu giấy và flc garden đại mỗ, liền kề ls20,21',N'Đang rao',N'Cơ sở này bao gồm: * 5 căn hộ thiết kế Studio Thụy Sĩ, * 1 nhà hàng design Pizzeria Grotto * 1 sân Minigolf quốc tế trong khuôn viên thoai......')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Cần bán chcccc 1201 toà l3 khu đô thị ciputra-tây hồ hà nội',N'Đang rao',N'Căn hộ 816 là căn hộ khách sạn condotel nằm trong tòa khách sạn 21 tầng hướng view ra toàn bộ vịnh hạ long, xung quanh là quần thể biệt thự và...')
+values('LBD01','1','H01','DM01','T01','Q01','PX01',N'Cần bán chcccc 1201 toà l3 khu đô thị ciputra-tây hồ hà nội',N'Đang rao',N'Căn hộ 816 là căn hộ khách sạn condotel nằm trong tòa khách sạn 21 tầng hướng view ra toàn bộ vịnh hạ long, xung quanh là quần thể biệt thự và...')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Gấp cần bán căn hộ 2 pn everrich infinity liền kề q1, full nội thất cao cấp',N'Kết thúc rao',N'Đất bán tại Lâm Đồng, 17.000 m2 PRICE: US $360K ( VND 480 triệu/1000 m2 ) ADDRESS: “PINE CREST FARMSTEAD” 19 Đường Đất Đỏ,...')
+values('LBD01','1','H01','DM01','T01','Q01','PX01',N'Gấp cần bán căn hộ 2 pn everrich infinity liền kề q1, full nội thất cao cấp',N'Kết thúc rao',N'Đất bán tại Lâm Đồng, 17.000 m2 PRICE: US $360K ( VND 480 triệu/1000 m2 ) ADDRESS: “PINE CREST FARMSTEAD” 19 Đường Đất Đỏ,...')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Felisa riverside quận 8, 99 bến bình đông, căn hộ an cư hot',N'Kết thúc rao',N'Vị trí căn hộ nằm ngay ngã tư an dương vương và võ văn kiệt, chỉ cách quận 1 15 phút chạy xe, dễ dàng di chuyển đến các quận trung tâm, không lo...')
+values('LBD01','1','H01','DM01','T01','Q01','PX01',N'Felisa riverside quận 8, 99 bến bình đông, căn hộ an cư hot',N'Kết thúc rao',N'Vị trí căn hộ nằm ngay ngã tư an dương vương và võ văn kiệt, chỉ cách quận 1 15 phút chạy xe, dễ dàng di chuyển đến các quận trung tâm, không lo...')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Căn hộ tại iris garden ck2% cho 50kh đầu tiên',N'Đang rao',N'Cho thuê căn hộ, diện tích 40 m2, bao gồm 1 phòng khách, 1 phòng bếp, nhà vệ sinh. Căn hộ đầy đủ các tiện ich')
+values('LBD01','2','H01','DM01','T01','Q01','PX01',N'Căn hộ tại iris garden ck2% cho 50kh đầu tiên',N'Đang rao',N'Cho thuê căn hộ, diện tích 40 m2, bao gồm 1 phòng khách, 1 phòng bếp, nhà vệ sinh. Căn hộ đầy đủ các tiện ich')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD04','TV001','H01','DM01','T01','Q01','PX01',N'Cơ hội đầu tư lớn từ dự án biển phú quốc của tập đoàn sungroup',N'Chờ phê duyệt',N'Giữ chỗ ngay hôm nay chỉ với 50 triệu để được sở hữu những căn đẹp nhất Monarchy trước ngày mở bán đợt cuối 1-4 tại Hà Nội và Đà Nẵng')
+values('LBD04','2','H01','DM01','T01','Q01','PX01',N'Cơ hội đầu tư lớn từ dự án biển phú quốc của tập đoàn sungroup',N'Chờ phê duyệt',N'Giữ chỗ ngay hôm nay chỉ với 50 triệu để được sở hữu những căn đẹp nhất Monarchy trước ngày mở bán đợt cuối 1-4 tại Hà Nội và Đà Nẵng')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD04','TV001','H01','DM01','T01','Q01','PX01',N'Duy nhất 20 căn biệt thự mặt biển nha trang cam kết lợi nhuận hơn 2 tỷ/năm',N'Chờ phê duyệt',N'Căn 1201 ( S: 115,3m2) tòa nhà L03, khu đô thị Ciputra, thời gian nhận nhà quý I 2018 Giá bán: 4,8 tỷ ( có thỏa thuận nếu nhiệt tình mua)')
+values('LBD04','2','H01','DM01','T01','Q01','PX01',N'Duy nhất 20 căn biệt thự mặt biển nha trang cam kết lợi nhuận hơn 2 tỷ/năm',N'Chờ phê duyệt',N'Căn 1201 ( S: 115,3m2) tòa nhà L03, khu đô thị Ciputra, thời gian nhận nhà quý I 2018 Giá bán: 4,8 tỷ ( có thỏa thuận nếu nhiệt tình mua)')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Căn hộ mặt tiền - view bitexco giá chỉ 1 tỷ 2 - liên hệ ngay để chọn căn đẹp',N'Chờ phê duyệt',N'Vị trí căn hộ nằm ngay giao lộ an dương vương với võ văn kiệt. cách trung tâm thành phố 15 phút chạy xe. thiết kế thông minh hình chữ u đón ánh...')
+values('LBD01','2','H01','DM01','T01','Q01','PX01',N'Căn hộ mặt tiền - view bitexco giá chỉ 1 tỷ 2 - liên hệ ngay để chọn căn đẹp',N'Chờ phê duyệt',N'Vị trí căn hộ nằm ngay giao lộ an dương vương với võ văn kiệt. cách trung tâm thành phố 15 phút chạy xe. thiết kế thông minh hình chữ u đón ánh...')
 insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa)
-values('LBD01','TV001','H01','DM01','T01','Q01','PX01',N'Chiết khấu lên đến 432 triệu khi mua căn hộ hinode city 201 minh khai',N'Chờ phê duyệt',N'Bán căn hộ cao cấp EverRich Infinity view Bitexco giá cực rẻ so với thị trường. - Diện tích 81m2. - 2 phòng ngủ, 2 Toilet, ban công, sân phơi,...')
+values('LBD01','3','H01','DM01','T01','Q01','PX01',N'Chiết khấu lên đến 432 triệu khi mua căn hộ hinode city 201 minh khai',N'Chờ phê duyệt',N'Bán căn hộ cao cấp EverRich Infinity view Bitexco giá cực rẻ so với thị trường. - Diện tích 81m2. - 2 phòng ngủ, 2 Toilet, ban công, sân phơi,...')
 select * from BaiDang
 
 
@@ -173,7 +172,7 @@ values('8','2900000000','150m2','images/baidang8.jpg',GETDATE(),'ABC',N'15 Hải
 insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,NoiDung,DiaChi)
 values('9','2900000000','150m2','images/baidang9.jpg',GETDATE(),'ABC',N'15 Hải Phòng')
 
-select * from ThongDiep
+
 create table ThongDiep(
 	MaThongDiep int identity(1,1) primary key,
 	MaBaiDang int foreign key references BaiDang(MaBaiDang),
@@ -185,7 +184,7 @@ insert into ThongDiep
 values('1',N'Phan Chân Anh','chauanh@gmail.com','0977237272')
 create table BinhLuan(
 	MaBinhLuan varchar(15) primary key,
-	MaThanhVien varchar(15) foreign key references ThanhVien(MaThanhVien),
+	MaThanhVien int foreign key references ThanhVien(MaThanhVien),
 	MaBaiDang int foreign key references BaiDang(MaBaiDang),
 	NoiDung nvarchar(100),
 	ThoiGian time

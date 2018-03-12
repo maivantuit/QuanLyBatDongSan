@@ -209,4 +209,14 @@
     <servlet-name>ThemThongDiepTrangChuServlet</servlet-name>
     <url-pattern>/ThemThongDiepTrangChuServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DangKyThanhVienTrangChuServlet</display-name>
+    <servlet-name>DangKyThanhVienTrangChuServlet</servlet-name>
+    <servlet-class>controller.DangKyThanhVienTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangKyThanhVienTrangChuServlet</servlet-name>
+    <url-pattern>/DangKyThanhVienTrangChuServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
