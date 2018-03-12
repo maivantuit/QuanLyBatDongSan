@@ -31,7 +31,7 @@
 			</h1>
 			<hr style="width: 50px; border: 5px solid red" class="w3-round">
 		</div>
-
+		<form action="DangTinTrangChuServlet" method="POST">
 		<div id="dangtinbatdongsan">
 			<h2>Đăng tin</h2>
 			<table>
@@ -54,7 +54,7 @@
 				%>
 					<td>Mã thành viên</td>
 					<td>
-						<input style="background: red;text-align: center;" readonly="readonly" type="text" name="mathanhvien" value="#<%=thanhVien.getMaThanhVien() %>" />
+						<input style="background: red;text-align: center;" readonly="readonly" type="text" name="mathanhvien" value="<%=thanhVien.getMaThanhVien() %>" />
 						</td>
 					
 				</tr>
@@ -66,7 +66,7 @@
 					<td><select name="mahuong">
 						<option>Chọn mã hướng</option>
 						<%for(Huong huong: danhSachHuong){ %>
-						<option <%=huong.getMaHuong() %>><%=huong.getMaHuong() %> - <%=huong.getTenHuong() %></option>
+						<option value="<%=huong.getMaHuong() %>"><%=huong.getMaHuong() %> - <%=huong.getTenHuong() %></option>
 						<%} %>
 					</select></td>
 				</tr>
@@ -133,7 +133,9 @@
 				</tr>
 				<tr>
 					<td>Mô tả:</td>
-					<td><input type="text" name="mota" value="" /></td>
+					<td>					
+					<textarea rows="" cols="" type="text" name="mota" value=""></textarea>
+					</td>
 				</tr>
 				<tr>
 					<td>Diện tích:</td>
@@ -141,11 +143,15 @@
 				</tr>
 				<tr>
 					<td>Đơn vị:</td>
-					<td><input type="text" name="dientich" value="" /></td>
+					<td><input type="text" name="donvi" value="" /></td>
 				</tr>
 				<tr>
 					<td>Địa chỉ:</td>
-					<td><input type="text" name="dientich" value="" /></td>
+					<td><input type="text" name="diachi" value="" /></td>
+				</tr>
+				<tr>
+					<td>Giá:</td>
+					<td><input type="text" name="gia" value="" /></td>
 				</tr>
 				<tr>
 					<td>Hình ảnh:</td>
@@ -154,14 +160,26 @@
 					</td>
 					
 				</tr>
+				<%
+					String success = (String) request.getAttribute("success");
+					if(success!=null){
+				%>
+				<tr>
+					<td></td>
+					<td>
+						<h5 style="color: blue"><%=success%></h5>
+					</td>
+				</tr>
+				<%} %>
 				<tr>
 				<td></td>
 					<td><button type="submit" name="submit"
 									value="submit">Thêm tin</button></td>
 				</tr>
+				
 			</table>
 		</div>
-
+		</form>
 		<div id="foodterdangtin"></div>
 
 	</div>

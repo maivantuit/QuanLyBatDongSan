@@ -195,3 +195,5 @@ create table BinhLuan(
 select * from BaiDang
 join ThanhVien on BaiDang.MaThanhVien = ThanhVien.MaThanhVien
 where BaiDang.MaBaiDang = '1'
+
+select * from BaiDang join ChiTietBaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang where TrangThai = N'Đang rao' or TrangThai = N'Kết thúc rao' 

@@ -156,7 +156,7 @@ public class BaiDangDAO {
 	// lay bang bai dang join chi tiet show len trang chu:
 	public ArrayList<BaiDang> layDuLieuBaiDangJoinChiTietBangDang(){
 		Connection con = DBConnect.getConnection();
-		String sql = "select * from BaiDang join ChiTietBaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang";
+		String sql = "select * from BaiDang join ChiTietBaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.MaBaiDang  where TrangThai = N'Đang rao' or TrangThai = N'Kết thúc rao' ";
 		ArrayList<BaiDang> danhSachBaiDang= new ArrayList<BaiDang>();
 		ResultSet rs = null;
 		try {
@@ -224,11 +224,11 @@ public class BaiDangDAO {
 		return baiDang;
 	}
 	// them moi bai dang: BaiDang - ChiTietBaiDang:
-	public String themBaiDang(String maBaiDang, String maLoaiBaiDang, String maThanhVien,
+	public String themBaiDang(String maLoaiBaiDang, String maThanhVien,
 			String maHuong, String maDanhMuc, String maTinh,
 			String maQuanHuyen, String maPhuongXa, String tenBaiDang,
 			String trangThai, String gia, String dienTich,
-			String donVi, String hinhAnh, String thoiGian, String diaChi,
+			String donVi, String hinhAnh, String diaChi,
 		String moTa) {
 		String str = new String();
 		Connection con = DBConnect.getConnection();
@@ -251,7 +251,7 @@ public class BaiDangDAO {
 			if(rs.next()){
 				maBaiDangCuoi = rs.getString(1);
 				// goi la ham them chi tiet:
-				String check=themChiTietBaiDang(maBaiDangCuoi, gia, dienTich, hinhAnh, thoiGian, diaChi);
+				String check=themChiTietBaiDang(maBaiDangCuoi, gia, dienTich, hinhAnh, diaChi);
 				if(check.equals("Chèn thành công")){
 					str ="Chèn thành công";
 				}else{
@@ -266,19 +266,19 @@ public class BaiDangDAO {
 	}
 	// them moi bai dang: BaiDang - ChiTietBaiDang:
 		public String themChiTietBaiDang(String maBaiDang, String gia, String dienTich,
-				String hinhAnh, String thoiGian, String diaChi
+				String hinhAnh,  String diaChi
 				) {
 			
 			Connection con = DBConnect.getConnection();
 			String str = new String();
+			hinhAnh ="images/baidang7.jpg";
 			try{
-				PreparedStatement p1 = con.prepareStatement("insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,DiaChi) values(?,?,?,?,?,?)");
+				PreparedStatement p1 = con.prepareStatement("insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,DiaChi) values(?,?,?,?,?)");
 				p1.setString(1, maBaiDang);
 				p1.setString(2, gia);
 				p1.setString(3, dienTich);
 				p1.setString(4, hinhAnh);
-				p1.setString(5, thoiGian);
-				p1.setString(6, diaChi);				
+				p1.setString(5, diaChi);				
 				int ok=p1.executeUpdate();
 				if(ok !=0){
 					str= "Chèn thành công";
@@ -294,8 +294,11 @@ public class BaiDangDAO {
 	
 	public static void main(String[] args) {
 		BaiDangDAO b = new BaiDangDAO();		
-		b.themBaiDang("BD11", "LBD01", "1", "H01", "DM01", "T01", "Q01", "PX01", "abc", "Trang thai ne", "2302322", "12m2", "chiec", "images/abc.jpg", "03/03/1995", "Qtri",  "mo ta abc");
-		
+		//b.themBaiDang( "LBD01", "1", "H01", "DM01", "T01", "Q01", "PX01", "abc", "Trang thai ne", "2302322", "12m2", "chiec", "images/abc.jpg",  "Qtri",  "mo ta abc");
+		ArrayList<BaiDang> list=b.layDuLieuBaiDangJoinChiTietBangDang();
+		for(BaiDang item:list){
+			System.out.println(item.getMaBaiDang());
+		}
 	}
 	
 }

@@ -45,15 +45,15 @@ public class BaiDangBO {
 
 	// dang tin:
 	// them moi bai dang: BaiDang - ChiTietBaiDang:
-	public String themBaiDang(String maBaiDang, String maLoaiBaiDang,
+	public String themBaiDang( String maLoaiBaiDang,
 			String maThanhVien, String maHuong, String maDanhMuc,
 			String maTinh, String maQuanHuyen, String maPhuongXa,
 			String tenBaiDang, String trangThai, String gia, String dienTich,
-			String donVi, String hinhAnh, String thoiGian, String diaChi,
+			String donVi, String hinhAnh, String diaChi,
 			String moTa) {
-		return baiDangDAO.themBaiDang(maBaiDang, maLoaiBaiDang, maThanhVien,
+		return baiDangDAO.themBaiDang( maLoaiBaiDang, maThanhVien,
 				maHuong, maDanhMuc, maTinh, maQuanHuyen, maPhuongXa,
-				tenBaiDang, trangThai, gia, dienTich, donVi, hinhAnh, thoiGian,
+				tenBaiDang, trangThai, gia, dienTich, donVi, hinhAnh,
 				diaChi, moTa);
 	}
 }
