@@ -41,6 +41,9 @@
 			<a href="">Quản lý bài đăng</a>
 		</h4>
 		<h4>
+			<a href="DangTinTrangChuServlet">Đăng tin</a>
+		</h4>
+		<h4>
 			<a href="DangXuatTrangChuServlet">Đăng xuất</a>
 		</h4>
 		<%} else{%>

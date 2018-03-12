@@ -148,7 +148,7 @@ create table ChiTietBaiDang(
 	DonVi varchar(40),
 	SoLuotXem int,
 	HinhAnh varchar(100),
-	ThoiGianDang time,
+	ThoiGianDang date default getdate(), --- get date
 	NoiDung nvarchar(500),
 	DiaChi nvarchar(50),
 )

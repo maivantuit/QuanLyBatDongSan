@@ -42,4 +42,18 @@ public class BaiDangBO {
 	public BaiDang chiTietBaiDangTrangChu(String maBaiDang) {
 		return baiDangDAO.chiTietBaiDangTrangChu(maBaiDang);
 	}
+
+	// dang tin:
+	// them moi bai dang: BaiDang - ChiTietBaiDang:
+	public String themBaiDang(String maBaiDang, String maLoaiBaiDang,
+			String maThanhVien, String maHuong, String maDanhMuc,
+			String maTinh, String maQuanHuyen, String maPhuongXa,
+			String tenBaiDang, String trangThai, String gia, String dienTich,
+			String donVi, String hinhAnh, String thoiGian, String diaChi,
+			String moTa) {
+		return baiDangDAO.themBaiDang(maBaiDang, maLoaiBaiDang, maThanhVien,
+				maHuong, maDanhMuc, maTinh, maQuanHuyen, maPhuongXa,
+				tenBaiDang, trangThai, gia, dienTich, donVi, hinhAnh, thoiGian,
+				diaChi, moTa);
+	}
 }

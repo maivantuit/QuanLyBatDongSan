@@ -223,12 +223,79 @@ public class BaiDangDAO {
 		}
 		return baiDang;
 	}
+	// them moi bai dang: BaiDang - ChiTietBaiDang:
+	public String themBaiDang(String maBaiDang, String maLoaiBaiDang, String maThanhVien,
+			String maHuong, String maDanhMuc, String maTinh,
+			String maQuanHuyen, String maPhuongXa, String tenBaiDang,
+			String trangThai, String gia, String dienTich,
+			String donVi, String hinhAnh, String thoiGian, String diaChi,
+		String moTa) {
+		String str = new String();
+		Connection con = DBConnect.getConnection();
+		trangThai = "Chờ phê duyệt";
+		try{
+			PreparedStatement p1 = con.prepareStatement("insert into BaiDang(MaLoaiBaiDang,MaThanhVien,MaHuong,MaDanhMuc,MaTinh,MaQuanHuyen,MaPhuongXa,TenBaiDang,TrangThai,MoTa) values(?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);			
+			p1.setString(1, maLoaiBaiDang);
+			p1.setString(2, maThanhVien);
+			p1.setString(3, maHuong);
+			p1.setString(4, maDanhMuc);
+			p1.setString(5, maTinh);
+			p1.setString(6, maQuanHuyen);
+			p1.setString(7, maPhuongXa);
+			p1.setString(8, tenBaiDang);
+			p1.setString(9, trangThai);
+			p1.setString(10, moTa);
+			p1.executeUpdate();
+			ResultSet rs = p1.getGeneratedKeys();
+			String maBaiDangCuoi;
+			if(rs.next()){
+				maBaiDangCuoi = rs.getString(1);
+				// goi la ham them chi tiet:
+				String check=themChiTietBaiDang(maBaiDangCuoi, gia, dienTich, hinhAnh, thoiGian, diaChi);
+				if(check.equals("Chèn thành công")){
+					str ="Chèn thành công";
+				}else{
+					str ="Chèn không thành công";
+				}
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+				
+		return str;
+	}
+	// them moi bai dang: BaiDang - ChiTietBaiDang:
+		public String themChiTietBaiDang(String maBaiDang, String gia, String dienTich,
+				String hinhAnh, String thoiGian, String diaChi
+				) {
+			
+			Connection con = DBConnect.getConnection();
+			String str = new String();
+			try{
+				PreparedStatement p1 = con.prepareStatement("insert into ChiTietBaiDang(MaBaiDang,Gia,DienTich,HinhAnh,ThoiGianDang,DiaChi) values(?,?,?,?,?,?)");
+				p1.setString(1, maBaiDang);
+				p1.setString(2, gia);
+				p1.setString(3, dienTich);
+				p1.setString(4, hinhAnh);
+				p1.setString(5, thoiGian);
+				p1.setString(6, diaChi);				
+				int ok=p1.executeUpdate();
+				if(ok !=0){
+					str= "Chèn thành công";
+				}else{
+					str= "Chèn không thành công";
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+						
+			return str;
+		}
+	
 	public static void main(String[] args) {
 		BaiDangDAO b = new BaiDangDAO();		
-		BaiDang a= b.chiTietBaiDangTrangChu("1");
-		System.out.println(a.getMaBaiDang());
-		System.out.println(a.getTrangThai());
-		System.out.println(a.getTenBaiDang());	
+		b.themBaiDang("BD11", "LBD01", "1", "H01", "DM01", "T01", "Q01", "PX01", "abc", "Trang thai ne", "2302322", "12m2", "chiec", "images/abc.jpg", "03/03/1995", "Qtri",  "mo ta abc");
+		
 	}
 	
 }

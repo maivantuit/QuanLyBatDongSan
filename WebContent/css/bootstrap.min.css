@@ -6905,3 +6905,12 @@ button.close {
 		display: none !important
 	}
 }
+#dangtinbatdongsan {
+    text-align: center;
+}
+
+#dangtinbatdongsan table {
+    text-align: center;
+    width: 50%;
+    margin-left: 24%;
+}
