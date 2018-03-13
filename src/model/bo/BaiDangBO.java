@@ -56,4 +56,8 @@ public class BaiDangBO {
 				tenBaiDang, trangThai, gia, dienTich, donVi, hinhAnh,
 				diaChi, moTa);
 	}
+	// lay bang bai dang join chi tiet show len trang chu:
+		public ArrayList<BaiDang> layDanhSachTimKiemBaiDang(String maLoaiBaiDang,String maTinh,String maQuanHuyen){
+			return baiDangDAO.layDanhSachTimKiemBaiDang(maLoaiBaiDang, maTinh, maQuanHuyen);
+		}
 }

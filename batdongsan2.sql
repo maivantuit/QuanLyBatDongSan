@@ -202,4 +202,4 @@ select * from BaiDang join ChiTietBaiDang on BaiDang.MaBaiDang = ChiTietBaiDang.
 join LoaiBaiDang on LoaiBaiDang.MaLoaiBaiDang = BaiDang.MaLoaiBaiDang
 join Tinh on Tinh.MaTinh = BaiDang.MaTinh
 join QuanHuyen on QuanHuyen.MaQuanHuyen = BaiDang.MaQuanHuyen
-where (TrangThai = N'Đang rao' or TrangThai = N'Kết thúc rao') and ( LoaiBaiDang.MaLoaiBaiDang='LBD01' or Tinh.MaTinh = 'T01' or QuanHuyen.MaQuanHuyen ='Q04')
+where (TrangThai = N'Đang rao' or TrangThai = N'Kết thúc rao') and ( LoaiBaiDang.MaLoaiBaiDang='LBD01' and Tinh.MaTinh = 'T01' )or QuanHuyen.MaQuanHuyen ='Q04')

@@ -77,7 +77,14 @@
 					<%
 						}
 					%>
+					<%
+						String thongBao = (String)request.getAttribute("thongBao");
+						if(thongBao!=null){
+							
 						
+					%>
+					<h3 style="color: blue"><%=thongBao %></h3>
+						<%} %>
 					</ul>
 				</div>
 				<div id="content-right">

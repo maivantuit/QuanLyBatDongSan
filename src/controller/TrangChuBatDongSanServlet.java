@@ -51,12 +51,8 @@ public class TrangChuBatDongSanServlet extends HttpServlet {
 		PhuongXaBO phuongXaBO = new PhuongXaBO();
 		BaiDangBO baiDangBO = new BaiDangBO();
 		// danh sach bai dang:
-		ArrayList<BaiDang> danhSachTongHopBaiDang = baiDangBO
-				.layDuLieuBaiDangJoinChiTietBangDang();
-		request.setAttribute("danhSachTongHopBaiDang", danhSachTongHopBaiDang);
-		for(BaiDang item : danhSachTongHopBaiDang){
-			System.out.println(item.getMaBaiDang());
-		}
+		ArrayList<BaiDang> danhSachTongHopBaiDang = null;
+
 		// lay loai bang dang:
 		ArrayList<LoaiBaiDang> danhSachLoaiBaiDang = loaiBaiDangBO
 				.layDuLieuLoaiBaiDang();
@@ -69,8 +65,25 @@ public class TrangChuBatDongSanServlet extends HttpServlet {
 				.layDuLieuQuanHuyen();
 		request.setAttribute("danhSachQuanHuyen", danhSachQuanHuyen);
 		// lau du lieu phuong xa:
-				ArrayList<PhuongXa> danhSachPhuongXa = phuongXaBO.layDuLieuPhuongXa();
-				request.setAttribute("danhSachPhuongXa", danhSachPhuongXa);
+		ArrayList<PhuongXa> danhSachPhuongXa = phuongXaBO.layDuLieuPhuongXa();
+		request.setAttribute("danhSachPhuongXa", danhSachPhuongXa);
+
+		// neu nhan sub mit:
+		if ("submit".equals(request.getParameter("submit"))) {
+			String maLoaiBaiDang = request.getParameter("maloaibatdongsan");
+			String maTinh = request.getParameter("matinh");;
+			String maQuanHuyen = request.getParameter("quanhuyen");
+			danhSachTongHopBaiDang = baiDangBO.layDanhSachTimKiemBaiDang(
+					maLoaiBaiDang, maTinh, maQuanHuyen);
+		} else {
+			danhSachTongHopBaiDang = baiDangBO
+					.layDuLieuBaiDangJoinChiTietBangDang();
+		}
+		if(danhSachTongHopBaiDang.size()==0){
+			String thongBao = "Không tìm thấy kết quả tìm kiếm, vui lòng tìm kiếm lại. Xin cảm ơn!";
+			request.setAttribute("thongBao", thongBao);
+		}
+		request.setAttribute("danhSachTongHopBaiDang", danhSachTongHopBaiDang);
 		// finally:
 		RequestDispatcher rd = request.getRequestDispatcher("trangchu.jsp");
 		rd.forward(request, response);

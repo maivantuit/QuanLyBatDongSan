@@ -112,26 +112,61 @@
 	<div id="timkiem">
 		<input class="timkiemall" type="text" name=""
 			placeholder="Tìm kiếm..." />
+			<form action="TrangChuBatDongSanServlet" method="GET">
 		<table>
 			<tr>
-				
-				<td><select>
-						<option class="timkiemall">Loại bất động sản</option>
-						
+				<%
+				ArrayList<LoaiBaiDang> danhSachLoaiBaiDang = (ArrayList<LoaiBaiDang>)request.getAttribute("danhSachLoaiBaiDang"); 
+				%>
+				<td><select name="maloaibatdongsan">
+						<option value="" class="timkiemall">Loại bất động sản</option>
+						<%
+							if(danhSachLoaiBaiDang!=null){															
+						%>
+							<%
+								for(LoaiBaiDang loaiBaiDang : danhSachLoaiBaiDang){
+									
+								
+							%>
+							<option value="<%=loaiBaiDang.getMaLoaiBaiDang() %>" class="timkiemall"><%=loaiBaiDang.getTenLoaiBaiDang() %></option>
+							<%} %>
+						<%} %>
 				</select></td>
 			</tr>
 			<tr>
-				
-				<td><select>
-						<option class="timkiemall">Tĩnh/thành phố</option>
-						
+				<%
+					ArrayList<Tinh> danhSachTinh = (ArrayList<Tinh>)request.getAttribute("danhSachTinh");
+				%>
+				<td><select name="matinh">
+						<option class="timkiemall" value="">Tĩnh/thành phố</option>
+						<%
+							if(danhSachTinh!=null){															
+						%>
+							<%
+								for(Tinh tinh : danhSachTinh){									
+								
+							%>
+							<option value="<%=tinh.getMaTinh()%>" class="timkiemall"><%=tinh.getTenTinh()%></option>
+							<%} %>
+						<%} %>
 				</select></td>
 			</tr>
 			<tr>
-				
-				<td><select>
-						<option class="timkiemall">Quận/huyện</option>
-						
+				<%
+					ArrayList<QuanHuyen> danhSachQuanHuyen = (ArrayList<QuanHuyen>)request.getAttribute("danhSachQuanHuyen");
+				%>
+				<td><select  name="quanhuyen">
+						<option value="" class="timkiemall">Quận/huyện</option>
+						<%
+							if(danhSachQuanHuyen!=null){															
+						%>
+							<%
+								for(QuanHuyen quanHuyen : danhSachQuanHuyen){									
+								
+							%>
+							<option value="<%=quanHuyen.getMaQuanHuyen() %>" class="timkiemall"><%=quanHuyen.getTenQuanHuyen() %></option>
+							<%} %>
+						<%} %>
 				</select></td>
 			</tr>			
 			<tr>
@@ -154,10 +189,12 @@
 			</tr>
 			<tr>
 				<td>
-					<button id="xemketqua">Xem kết quả</button>
+					<button id="xemketqua" type="submit" name="submit"
+									value="submit">Xem kết quả</button>
 				</td>
 			</tr>
 		</table>
+		</form>
 	</div>
 	</nav>
 </body>

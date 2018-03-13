@@ -259,4 +259,14 @@
     <servlet-name>ChiTietBaiDangThanhVienServlet</servlet-name>
     <url-pattern>/ChiTietBaiDangThanhVienServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TimKiemBaiDangTongHopServlet</display-name>
+    <servlet-name>TimKiemBaiDangTongHopServlet</servlet-name>
+    <servlet-class>controller.TimKiemBaiDangTongHopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TimKiemBaiDangTongHopServlet</servlet-name>
+    <url-pattern>/TimKiemBaiDangTongHopServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
