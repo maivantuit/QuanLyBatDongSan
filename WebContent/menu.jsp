@@ -172,18 +172,24 @@
 			<tr>
 				<td><select>
 						<option class="timkiemall">Diện tích</option>
-						<option class="timkiemall">10-100</option>
-						<option class="timkiemall">100-1000</option>
-						<option class="timkiemall">1000-10000</option>
+						<option class="timkiemall">Chưa xác định</option>
+						<option class="timkiemall">Dưới 30m2</option>
+						<option class="timkiemall">30m2-50m2</option>
+						<option class="timkiemall">50m2-80m2</option>
+						<option class="timkiemall">80m2-100m2</option>
+						<option class="timkiemall">100m2-200m2</option>
 				</select></td>
 			</tr>
 			</tr>
 			<tr>
 				<td><select>
 						<option class="timkiemall">Mức giá</option>
-						<option class="timkiemall">10-100</option>
-						<option class="timkiemall">100-1000</option>
-						<option class="timkiemall">1000-10000</option>
+						<option class="timkiemall">Thõa thuận</option>
+						<option class="timkiemall">Dưới 500tr</option>
+						<option class="timkiemall">500tr-800tr</option>
+						<option class="timkiemall">800tr-1 tỷ</option>
+						<option class="timkiemall">1 tỷ-2 tỷ</option>
+						<option class="timkiemall">2 tỷ-5 tỷ</option>
 				</select></td>
 			</tr>
 			</tr>
