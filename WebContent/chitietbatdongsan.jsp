@@ -19,7 +19,7 @@
 		BaiDang baiDang = (BaiDang) request.getAttribute("baiDang");
 		ThanhVien thanhVien = (ThanhVien) request.getAttribute("thanhVien");
 	%>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="menu.jsp"></jsp:include>
 
 
 	<div class="w3-main" style="margin-left: 340px; margin-right: 40px">

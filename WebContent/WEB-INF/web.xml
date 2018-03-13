@@ -229,4 +229,34 @@
     <servlet-name>DangTinTrangChuServlet</servlet-name>
     <url-pattern>/DangTinTrangChuServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ThongDiepAdminServlet</display-name>
+    <servlet-name>ThongDiepAdminServlet</servlet-name>
+    <servlet-class>controller.ThongDiepAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThongDiepAdminServlet</servlet-name>
+    <url-pattern>/ThongDiepAdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QuanLyBaiDangTrangChuServlet</display-name>
+    <servlet-name>QuanLyBaiDangTrangChuServlet</servlet-name>
+    <servlet-class>controller.QuanLyBaiDangTrangChuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuanLyBaiDangTrangChuServlet</servlet-name>
+    <url-pattern>/QuanLyBaiDangTrangChuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ChiTietBaiDangThanhVienServlet</display-name>
+    <servlet-name>ChiTietBaiDangThanhVienServlet</servlet-name>
+    <servlet-class>controller.ChiTietBaiDangThanhVienServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChiTietBaiDangThanhVienServlet</servlet-name>
+    <url-pattern>/ChiTietBaiDangThanhVienServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

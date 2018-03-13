@@ -11,11 +11,23 @@
 <title>Đăng nhập</title>
 </head>
 <body>
-	<%
+	<script type="text/javascript">
+		function validate(){
+			var email = document.getElementById('txtEmail').value;
+			if(email=""){
+				alert("Vui lòng nhập email!");
+				return false;
+			}
+			var matKhau = document.getElementById('txtMatKhau').value;
+			if(matKhau=""){
+				alert("Vui lòng nhập mật khẩu!");
+				return false;
+			}
+			
+		} 
 		
-	
-	%>
-	<jsp:include page="header.jsp"></jsp:include>
+	</script>
+	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="login-screen"></div>
     <div class="login-center">
         <div class="container min-height" style="margin-top: 20px;">
@@ -24,10 +36,10 @@
                     <div class="login" id="card">
                     	<div class="front signin_form"> 
                         <p>Login Your Account</p>
-                          <form class="login-form" action="DangNhapTrangChuServlet" method="POST">
+                          <form onsubmit="return validate();" class="login-form" action="DangNhapTrangChuServlet" method="POST">
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="email" class="form-control" name="email" placeholder="Type your email">
+                                      <input id="txtEmail" type="email" class="form-control" name="email" placeholder="Type your email">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-user"></i>
                                       </span>
@@ -35,7 +47,7 @@
                               </div>
                               <div class="form-group">
                                   <div class="input-group">
-                                      <input type="password" class="form-control" placeholder="Type your password" name="matkhau">
+                                      <input id="txtMatKhau" type="password" class="form-control" placeholder="Type your password" name="matkhau">
                                       <span class="input-group-addon">
                                           <i class="glyphicon glyphicon-lock"></i>
                                       </span>
@@ -52,7 +64,7 @@
                             <%} %>
                               
                               <div class="form-group sign-btn">
-                                  <button class="bn" type="submit" name="submit" value="submit">Login</button>   
+                                  <button  class="bn" type="submit" name="submit" value="submit">Login</button>   
                                   <p><a href="#" class="forgot">Can't access your account?</a></p>
                                   <p><strong>New to TimeInfo?</strong><br><a href="dangkythanhvien.jsp" id="flip-btn" class="signup signup_link">Sign up for a new account</a></p>
                               </div>

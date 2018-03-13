@@ -68,7 +68,7 @@
 					%>
 						<li>
 							<a href="ChiTietBaiDangTrangChuServlet?maBaiDangURL=<%=baiDang.getMaBaiDang()%>"><img src="<%=baiDang.getHinhAnh()%>"></a>
-							<p style="font-size:20px;color: red;font-weight:bold;" ><a href="ChiTietBaiDangTrangChuServlet?maBaiDangURL=<%=baiDang.getMaBaiDang()%>"><%=baiDang.getTenBaiDang()%></a></p>
+							<p style="font-size:20px;color: red;font-weight:bold;" ><a href="ChiTietBaiDangTrangChuServlet?maBaiDangURL=<%=baiDang.getMaBaiDang()%>"><%=baiDang.getTenBaiDang()%></a></p>							
 							<p>Thời gian: <%=baiDang.getThoiGian() %></p>
 							<p>Giá: <%=baiDang.getGia() %></p>
 							<p>Diện tích: <%=baiDang.getDienTich() %><p>							

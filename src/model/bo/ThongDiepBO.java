@@ -1,5 +1,8 @@
 package model.bo;
 
+import java.util.ArrayList;
+
+import model.bean.ThongDiep;
 import model.dao.ThongDiepDAO;
 
 public class ThongDiepBO {
@@ -10,5 +13,10 @@ public class ThongDiepBO {
 			String gmailNguoiGui, String sdtNguoiGui) {
 		return thongDiepDAO.themThongDiepMoi(maBaiDang, tenNguoiGui,
 				gmailNguoiGui, sdtNguoiGui);
+	}
+
+	// show table ThongDiep:
+	public ArrayList<ThongDiep> layDuLieuThongDiep() {
+		return thongDiepDAO.layDuLieuThongDiep();
 	}
 }

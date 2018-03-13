@@ -2117,3 +2117,51 @@ to {
 #dangtinbatdongsan{
 	background: #ccc;
 }
+#foodterdangtin {
+    height: 100px;
+    background: #f44336;
+    width: 100%;
+    margin-top: 10px;
+}
+/*quan ly bai dang trang chu*/
+#quanlybatdongsantrangchu table tr td {
+    border: 1px solid #ccc;
+}
+
+
+#quanlybatdongsantrangchu table tr th {
+    border: 1px solid #ccc;
+    background: #d69393;
+}
+#quanlybatdongsantrangchu table{
+	 background: bisque;
+	
+}
+#quanlybatdongsantrangchu {
+   
+    height: 100%;
+    width: 100%;
+}
+#quanlychitietbaidangtrangchu #info {
+    height: 100%;
+    width: 40%;
+    float: right;
+    line-height: 50px;
+    padding-left: 100px;
+}
+
+
+#quanlychitietbaidangtrangchu #anhdaidien {
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+
+#quanlychitietbaidangtrangchu #anhdaidien img {
+    height: 100%;
+    width: 100%;
+}
+#quanlybatdongsantrangchu table {
+    text-align: center;
+    margin-left: 15%;
+}

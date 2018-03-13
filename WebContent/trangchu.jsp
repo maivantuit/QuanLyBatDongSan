@@ -7,9 +7,8 @@
 <link rel="icon" href='images/favicon.ico' type="image/x-icon" />
 <title>Trang chủ bất động sản</title>
 </head>
-<body>
-	
-	<jsp:include page="header.jsp"></jsp:include>
-	<jsp:include page="top.jsp"></jsp:include>
+<body>	
+	<jsp:include page="menu.jsp"></jsp:include>
+	<jsp:include page="content.jsp"></jsp:include>
 </body>
 </html>

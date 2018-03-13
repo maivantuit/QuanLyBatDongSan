@@ -38,7 +38,7 @@
 					lý thành viên</a>
 			</li>
 			<li>
-				<a href="/QuanLyBatDongSan/DanhSachThanhVienServlet">Quản
+				<a href="/QuanLyBatDongSan/ThongDiepAdminServlet">Quản
 					lý thông điệp</a>
 			</li>
 			<li><a href="/QuanLyBatDongSan/DanhSachTatCaBaiDangServlet">Quản

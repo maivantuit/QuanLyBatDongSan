@@ -38,7 +38,7 @@
 			<a href="">Thông tin cá nhân</a>
 		</h4>
 		<h4>
-			<a href="">Quản lý bài đăng</a>
+			<a href="QuanLyBaiDangTrangChuServlet?maThanhVien=<%= thanhVien.getMaThanhVien()%>">Quản lý bài đăng</a>
 		</h4>
 		<h4>
 			<a href="DangTinTrangChuServlet">Đăng tin</a>
@@ -114,51 +114,41 @@
 			placeholder="Tìm kiếm..." />
 		<table>
 			<tr>
+				
 				<td><select>
 						<option class="timkiemall">Loại bất động sản</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
+						
 				</select></td>
 			</tr>
 			<tr>
+				
 				<td><select>
 						<option class="timkiemall">Tĩnh/thành phố</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
+						
 				</select></td>
 			</tr>
 			<tr>
+				
 				<td><select>
 						<option class="timkiemall">Quận/huyện</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
+						
 				</select></td>
-			</tr>
-			<tr>
-				<td><select>
-						<option class="timkiemall">Phường/xã</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td><select>
-						<option class="timkiemall">Đường/phố</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
-				</select></td>
-			</tr>
+			</tr>			
 			<tr>
 				<td><select>
 						<option class="timkiemall">Diện tích</option>
-						<option class="timkiemall">A</option>
-						<option class="timkiemall">B</option>
+						<option class="timkiemall">10-100</option>
+						<option class="timkiemall">100-1000</option>
+						<option class="timkiemall">1000-10000</option>
 				</select></td>
 			</tr>
 			</tr>
 			<tr>
 				<td><select>
 						<option class="timkiemall">Mức giá</option>
+						<option class="timkiemall">10-100</option>
+						<option class="timkiemall">100-1000</option>
+						<option class="timkiemall">1000-10000</option>
 				</select></td>
 			</tr>
 			</tr>

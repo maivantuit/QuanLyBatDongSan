@@ -18,7 +18,7 @@
 	<%
 		ArrayList<LoaiBaiDang> danhSachLoaiBaiDang = (ArrayList<LoaiBaiDang>) request.getAttribute("danhSachLoaiBaiDang");
 	%>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="menu.jsp"></jsp:include>
 
 
 	<div class="w3-main" style="margin-left: 340px; margin-right: 40px">

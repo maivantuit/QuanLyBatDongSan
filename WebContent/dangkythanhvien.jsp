@@ -30,7 +30,7 @@
 }
 </style>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="menu.jsp"></jsp:include>
 	<form action="DangKyThanhVienTrangChuServlet" method="POST">
 		<div class="container">
 			<div class="col-md-3"></div>

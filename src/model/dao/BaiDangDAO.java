@@ -171,7 +171,7 @@ public class BaiDangDAO {
 				baiDang.setMaTinh(rs.getString("MaTinh"));
 				baiDang.setMaQuanHuyen(rs.getString("MaQuanHuyen"));
 				baiDang.setMaPhuongXa(rs.getString("MaPhuongXa"));
-				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));								
+				baiDang.setTenBaiDang(rs.getString("TenBaiDang"));					
 				baiDang.setGia(rs.getString("Gia"));
 				baiDang.setDienTich(rs.getString("DienTich"));
 				baiDang.setMaThanhVien(rs.getString("MaThanhVien"));

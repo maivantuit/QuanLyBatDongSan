@@ -43,8 +43,7 @@ public class DangNhapAdminServlet extends HttpServlet {
 		String matKhau = request.getParameter("matKhau");
 		DangNhapAdminBO dangNhapAdminBO = new DangNhapAdminBO();
 		if(dangNhapAdminBO.checkLogin(tenDangNhap, matKhau)){		
-			HttpSession session = request.getSession();
-			
+			HttpSession session = request.getSession();			
 			session.setAttribute("tenDangNhap", tenDangNhap);
 			response.sendRedirect("TrangChuServlet");
 		}else{

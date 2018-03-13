@@ -35,6 +35,7 @@ public class ThemThongDiepTrangChuServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		// TODO Auto-generated method stub
 		ThongDiepBO thongDiepBO = new ThongDiepBO();
 		
@@ -49,7 +50,7 @@ public class ThemThongDiepTrangChuServlet extends HttpServlet {
 			if(checkThem=true){				
 				String success = "Thêm thông điệp thành công";
 				request.setAttribute(success, "success");				
-				response.sendRedirect("ChiTietBaiDangTrangChuServlet");
+				response.sendRedirect("TrangChuBatDongSanServlet");
 			}else{
 				RequestDispatcher rd = request.getRequestDispatcher("TrangChuBatDongSanServlet");
 				rd.forward(request, response);

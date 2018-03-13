@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,21 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.bean.BaiDang;
-import model.bean.ThanhVien;
-import model.bo.BaiDangBO;
-import model.bo.ThanhVienBO;
+import model.bean.ThongDiep;
+import model.bo.ThongDiepBO;
 
 /**
- * Servlet implementation class ChiTietBaiDangTrangChuServlet
+ * Servlet implementation class ThongDiepAdminServlet
  */
-public class ChiTietBaiDangTrangChuServlet extends HttpServlet {
+public class ThongDiepAdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChiTietBaiDangTrangChuServlet() {
+    public ThongDiepAdminServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,22 +37,15 @@ public class ChiTietBaiDangTrangChuServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
 		// TODO Auto-generated method stub
-		BaiDangBO baiDangBO = new BaiDangBO();
-		ThanhVienBO thanhVienBO = new ThanhVienBO();
-		// lay ma bai dang tu url top.jsp:
-		String maBaiDangURL = request.getParameter("maBaiDangURL");
-		BaiDang baiDang=baiDangBO.chiTietBaiDangTrangChu(maBaiDangURL);
-		request.setAttribute("baiDang", baiDang);
+		ThongDiepBO thongDiepBO = new ThongDiepBO();
 		
-		// lay thanh vien tu ma bai dang url:
-		ThanhVien thanhVien = thanhVienBO.thanhVienCodeBaiDang(maBaiDangURL);
-		request.setAttribute("thanhVien", thanhVien);
-		//finally:
-		RequestDispatcher rd = request.getRequestDispatcher("chitietbatdongsan.jsp");
+		ArrayList<ThongDiep> danhSachThongDiep = thongDiepBO.layDuLieuThongDiep();
+		request.setAttribute("danhSachThongDiep",danhSachThongDiep );
+		
+		// finally:
+		RequestDispatcher rd = request.getRequestDispatcher("admin/thongdiep.jsp");
 		rd.forward(request, response);
-		
 	}
 
 }
